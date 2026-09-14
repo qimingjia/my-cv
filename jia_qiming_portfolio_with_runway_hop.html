@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="贾淇茗｜互动式个人作品集与简历">
+<title>JIA QIMING — Creative Universe</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+:root{--ink:#151515;--paper:#f4f1eb;--acid:#d8ff45;--muted:#777;--line:#c9c5bc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans","Noto Sans SC",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:22px 4vw;border-bottom:1px solid transparent;mix-blend-mode:multiply;transition:.3s}header.scrolled{background:#f4f1ebdd;border-color:var(--line);backdrop-filter:blur(12px)}.logo{font-weight:700;letter-spacing:-.04em}.logo span{display:inline-grid;place-items:center;background:var(--ink);color:var(--paper);width:30px;height:30px;border-radius:50%;margin-right:8px;font-size:12px}.nav{display:flex;gap:24px;font-size:12px;text-transform:uppercase}.nav a{position:relative}.nav a:after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--ink);transition:.3s}.nav a:hover:after{width:100%}.menu{display:none;background:none;border:0;font-size:24px}
+.hero{min-height:100vh;padding:150px 4vw 35px;display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center;position:relative}.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(64px,10vw,155px);line-height:.83;letter-spacing:-.09em;margin:30px 0;font-weight:700}h1 em,h2 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.08em}.intro{max-width:430px;line-height:1.8;color:#4e4e4e;font-size:15px}.actions{display:flex;gap:20px;align-items:center;margin-top:35px}.btn{border:1px solid var(--ink);padding:15px 20px;background:var(--ink);color:var(--paper);font-size:12px}.btn.alt{background:transparent;color:var(--ink)}.btn:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--acid)}
+.hero-art{position:relative;min-height:520px;display:grid;place-items:center;perspective:900px}.orbit{position:absolute;width:min(38vw,430px);aspect-ratio:1;border:1px solid #aaa;border-radius:50%;animation:spin 28s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:12px;height:12px;background:var(--ink);border-radius:50%;top:50%;left:-6px}.orbit:after{top:15%;left:83%;background:var(--acid);border:1px solid var(--ink)}@keyframes spin{to{transform:rotate(360deg)}}.poster{width:min(31vw,350px);aspect-ratio:3/4;background:#222;position:relative;transform:rotate(-7deg);box-shadow:18px 18px 0 var(--acid);overflow:hidden;transition:transform .2s}.poster:before{content:"JQ";position:absolute;font-size:clamp(120px,18vw,250px);font-weight:900;letter-spacing:-.15em;left:-25px;top:65px;color:#d9d6cd;line-height:1}.poster:after{content:"BODY / SPACE / IMAGE";position:absolute;bottom:20px;left:20px;color:white;font-size:11px;letter-spacing:.16em}.poster .shape{position:absolute;width:65%;height:75%;left:18%;top:12%;background:linear-gradient(145deg,#d8ff45,#777 45%,#f4f1eb);clip-path:polygon(40% 0,70% 12%,58% 33%,100% 70%,72% 100%,24% 76%,0 40%,25% 22%);mix-blend-mode:screen;animation:morph 7s ease-in-out infinite}@keyframes morph{50%{clip-path:polygon(20% 0,100% 22%,75% 50%,100% 100%,35% 85%,0 55%,25% 25%)}}.hero-note{position:absolute;bottom:0;left:0;font-size:11px;letter-spacing:.12em}.hero-note:before{content:"";display:inline-block;width:70px;height:1px;background:var(--ink);vertical-align:middle;margin-right:12px}
+section{padding:120px 4vw;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;margin-bottom:55px}.section-no{font-size:11px;letter-spacing:.12em}.section-head h2{font-size:clamp(42px,6vw,90px);letter-spacing:-.07em;line-height:.9;margin:0;max-width:700px}.section-head p{max-width:260px;font-size:13px;line-height:1.7;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw}.about-grid p{line-height:2;font-size:15px;max-width:560px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.tag{border:1px solid var(--ink);border-radius:100px;padding:10px 14px;font-size:12px}.tag:hover{background:var(--acid)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filter{background:transparent;border:1px solid var(--line);padding:9px 13px;font-size:12px}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.projects{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.project{grid-column:span 4;min-height:390px;border:1px solid var(--ink);position:relative;overflow:hidden;background:#dedbd2;transition:.35s}.project:nth-child(1){grid-column:span 7;min-height:520px}.project:nth-child(2){grid-column:span 5}.project:nth-child(3){grid-column:span 5}.project:nth-child(4){grid-column:span 7}.project:hover{transform:translateY(-7px);box-shadow:10px 10px 0 var(--acid)}.project-art{height:100%;min-height:300px;position:absolute;inset:0;background:#222;overflow:hidden}.project:nth-child(2) .project-art{background:#b6b3aa}.project:nth-child(3) .project-art{background:#e4e0d7}.project:nth-child(4) .project-art{background:#c6ff45}.project-art:before{content:"";position:absolute;width:65%;height:75%;left:18%;top:10%;background:linear-gradient(135deg,#f4f1eb,#777);clip-path:polygon(50% 0,75% 22%,100% 40%,65% 100%,30% 75%,0 40%,25% 20%);transform:rotate(12deg);transition:.5s}.project:nth-child(2) .project-art:before{background:#111;clip-path:polygon(0 0,100% 0,70% 100%,25% 80%)}.project:nth-child(3) .project-art:before{background:#222;clip-path:circle(38% at 50% 45%)}.project:nth-child(4) .project-art:before{background:#222;clip-path:polygon(0 0,100% 20%,80% 100%,20% 75%)}.project:hover .project-art:before{transform:rotate(-12deg) scale(1.1)}.project-info{position:absolute;inset:auto 0 0;padding:22px;background:linear-gradient(transparent,#111);color:white;padding-top:90px}.project-info small{font-size:10px;letter-spacing:.12em}.project-info h3{margin:8px 0 0;font-size:25px;letter-spacing:-.05em}.project-info button{margin-top:12px;background:var(--acid);border:0;padding:8px 12px;font-size:11px}
+.lab{background:#181818;color:#f4f1eb}.lab .section-head p{color:#aaa}.lab-stage{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}.look-stage{min-height:560px;position:relative;background:repeating-linear-gradient(90deg,#242424 0,#242424 1px,transparent 1px,transparent 50px);border:1px solid #444;display:grid;place-items:center;overflow:hidden}.look-stage:before{content:"";position:absolute;width:70%;height:90%;border:1px solid #555;transform:perspective(400px) rotateX(55deg);bottom:-35%;border-radius:50%}.model{width:240px;height:430px;position:relative;filter:drop-shadow(0 0 35px var(--glow,#d8ff45));transition:.4s}.head{position:absolute;width:55px;height:70px;border-radius:50%;background:var(--fabric,#d8ff45);left:92px;top:10px}.body{position:absolute;left:78px;top:70px;width:85px;height:155px;background:var(--fabric,#d8ff45);clip-path:polygon(25% 0,75% 0,100% 100%,0 100%)}.skirt{position:absolute;left:18px;top:190px;width:205px;height:220px;background:var(--fabric,#d8ff45);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);transition:.4s}.model-label{position:absolute;bottom:18px;left:18px;font-size:11px;letter-spacing:.15em;color:#aaa}.materials{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}.material{background:transparent;border:1px solid #555;color:white;text-align:left;padding:14px}.material.active,.material:hover{border-color:var(--acid);background:#2b2b2b}.material b{display:block;color:var(--acid);font-size:12px}.material span{font-size:12px;color:#aaa}.lab-copy h3{font-size:clamp(35px,5vw,70px);letter-spacing:-.07em;margin:10px 0}.lab-copy p{color:#aaa;line-height:1.8;max-width:400px}.random{margin-top:20px;background:var(--acid);border:0;padding:14px 18px}
+.timeline{max-width:900px;margin-left:auto}.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:28px 0;border-top:1px solid var(--line)}.timeline-item .date{font-size:12px;color:var(--muted)}.timeline-item h3{margin:0 0 10px;font-size:23px;letter-spacing:-.04em}.timeline-item p{margin:0;color:var(--muted);line-height:1.8;font-size:14px}
+.contact{background:var(--acid);min-height:70vh;display:flex;flex-direction:column;justify-content:space-between}.contact h2{font-size:clamp(65px,11vw,170px);line-height:.82;letter-spacing:-.09em;margin:30px 0 60px}.email{font-size:clamp(20px,3vw,42px);border-bottom:2px solid var(--ink);display:inline-block}.contact-foot{display:flex;justify-content:space-between;font-size:11px;margin-top:100px;gap:20px}
+.modal{position:fixed;inset:0;background:#151515dd;z-index:30;display:none;place-items:center;padding:25px}.modal.open{display:grid}.modal-box{background:var(--paper);max-width:650px;width:100%;padding:35px;position:relative}.close{position:absolute;right:18px;top:15px;background:none;border:0;font-size:25px}.modal-box h3{font-size:42px;letter-spacing:-.07em;margin:20px 0}.modal-box p{line-height:1.9;color:#555}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){header{padding:16px 5vw}.nav{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:120px}.hero-art{min-height:400px}.poster{width:65vw}.orbit{width:80vw}.section-head,.about-grid,.lab-stage{grid-template-columns:1fr;display:grid}.projects{display:grid;grid-template-columns:1fr}.project,.project:nth-child(n){grid-column:auto;min-height:420px}.timeline-item{grid-template-columns:1fr;gap:10px}.contact-foot{flex-direction:column}.hero h1{font-size:20vw}}
+
+.game-zone{background:#dedbd2}
+.game-card{display:grid;grid-template-columns:1fr 1fr;gap:5vw;border:1px solid var(--ink);padding:34px;background:var(--paper);align-items:center}
+.game-card-copy h3{font-size:clamp(38px,5vw,72px);line-height:.95;letter-spacing:-.07em;margin:18px 0}
+.game-card-copy p{max-width:390px;color:var(--muted);line-height:1.8;font-size:14px}
+.game-preview{background:#171722;border:1px solid #444;min-height:300px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.preview-stage{position:relative;min-height:245px;background:linear-gradient(#292944,#101018);overflow:hidden}
+.preview-stage:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent 49px,#ffffff12 50px)}
+.preview-platform{position:absolute;left:12%;right:12%;bottom:45px;height:24px;background:#f3f1ff;border-top:5px solid #ff4fa3;box-shadow:0 0 25px #ff4fa3}
+.preview-platform:after{content:"";position:absolute;left:15%;right:15%;top:10px;height:7px;background:#2b203d}
+.preview-model{position:absolute;left:48%;bottom:70px;font-size:70px;color:#ffda63;text-shadow:0 0 20px #ff4fa3;animation:previewBounce 1.8s ease-in-out infinite}
+.preview-light{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffda63;box-shadow:0 0 15px #ffda63}
+.preview-light.l1{left:15%;bottom:18px}.preview-light.l2{left:50%;bottom:18px}.preview-light.l3{right:15%;bottom:18px}
+@keyframes previewBounce{50%{transform:translateY(-35px) rotate(8deg)}}
+.preview-caption{color:#aaa;font-size:11px;letter-spacing:.18em;margin-top:15px}
+.game-modal{position:fixed;inset:0;background:#0c0c14e8;z-index:80;display:none;place-items:center;padding:18px}
+.game-modal.open{display:grid}
+.game-modal-box{width:min(1120px,96vw);height:min(760px,94vh);background:#101018;border:1px solid #fff5;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 25px 100px #000b}
+.game-modal-box iframe{width:100%;height:100%;border:0;display:block}
+.game-close{position:absolute;z-index:2;right:12px;top:10px;width:38px;height:38px;border:1px solid #fff8;border-radius:50%;background:#171722dd;color:#fff;font-size:25px;line-height:1}
+@media(max-width:800px){.game-card{grid-template-columns:1fr;padding:22px}.game-modal{padding:6px}.game-modal-box{width:100%;height:96vh;border-radius:12px}}
+</style>
+</head>
+<body>
+<header id="header"><a class="logo" href="#top"><span>JQ</span>PORTFOLIO</a><nav class="nav"><a href="#about">About</a><a href="#work">Work</a><a href="#lab">Lab</a><a href="#experience">CV</a><a href="#contact">Contact</a></nav><button class="menu" onclick="document.querySelector('.nav').style.display=document.querySelector('.nav').style.display==='flex'?'none':'flex'">☰</button></header>
+
+<main id="top">
+<section class="hero">
+<div><div class="eyebrow">Creative portfolio · 2026</div><h1>Ideas<br><em>in motion.</em></h1><p class="intro">你好，我是贾淇茗。一个从服装表演出发，在艺术、科技、商业与视觉表达之间寻找新连接的创意实践者。</p><div class="actions"><a class="btn" href="#work">探索作品 ↓</a><a class="btn alt" href="#contact">联系我 ↗</a></div></div>
+<div class="hero-art" id="heroArt"><div class="orbit"></div><div class="poster"><div class="shape"></div></div><div class="hero-note">BODY / SPACE / IMAGE / INTERACTION</div></div>
+</section>
+
+<section id="about"><div class="section-head"><div class="section-no">01 / ABOUT ME</div><div><h2>让身体、文字<br>和视觉<strong>发生关系。</strong></h2></div><p>我相信一个好想法不应该只停留在纸面上，它应该被看见、被体验，也被记住。</p></div><div class="about-grid"><div><p>本科就读于天津工业大学服装表演专业，训练了我对身体、空间、造型与镜头的敏锐感知；研究生阶段进一步探索艺术、科技与商业之间的交叉可能。</p><p>我擅长从内容出发梳理信息，用视觉、文字、身体和交互把一个想法变成有感染力的作品。</p></div><div><div class="eyebrow">My creative toolkit</div><div class="tags"><span class="tag">内容策划</span><span class="tag">视觉设计</span><span class="tag">摄影与编辑</span><span class="tag">品牌传播</span><span class="tag">艺术研究</span><span class="tag">互动体验</span></div></div></div></section>
+
+<section id="work"><div class="section-head"><div class="section-no">02 / SELECTED WORK</div><div><h2>一些正在<br><em>成形的想法。</em></h2></div><p>点击分类，或打开任意项目查看项目说明。</p></div><div class="filters"><button class="filter active" data-filter="all">ALL</button><button class="filter" data-filter="fashion">FASHION</button><button class="filter" data-filter="visual">VISUAL</button><button class="filter" data-filter="brand">BRAND</button></div><div class="projects">
+<article class="project" data-cat="fashion"><div class="project-art"></div><div class="project-info"><small>01 — FASHION / EDITORIAL</small><h3>关于日常的另一种想象</h3><button onclick="openModal('关于日常的另一种想象','以身体、服装与空间为线索，探索日常经验如何被重新编排。这里可以替换成你的完整项目介绍、过程图片和成果链接。')">查看项目 ↗</button></div></article>
+<article class="project" data-cat="brand"><div class="project-art"></div><div class="project-info"><small>02 — BRAND / CONTENT</small><h3>品牌叙事与内容表达</h3><button onclick="openModal('品牌叙事与内容表达','从品牌定位、视觉语气到内容结构，建立一套更清晰、更有情绪识别度的表达方式。')">查看项目 ↗</button></div></article>
+<article class="project" data-cat="visual"><div class="project-art"></div><div class="project-info"><small>03 — VISUAL / IMAGE</small><h3>色彩、材质与情绪</h3><button onclick="openModal('色彩、材质与情绪','通过色彩、材质、光线与构图，建立具有氛围感的视觉叙事。')">查看项目 ↗</button></div></article>
+<article class="project" data-cat="visual"><div class="project-art"></div><div class="project-info"><small>04 — IN PROGRESS</small><h3>更多作品正在整理中</h3><button onclick="openModal('更多作品','这里可以继续加入研究项目、课程作品、实习经历或个人实验。')">查看项目 ↗</button></div></article>
+</div></section>
+
+<section class="lab" id="lab"><div class="section-head"><div class="section-no">03 / DIGITAL FASHION LAB</div><div><h2>When fashion<br><em>becomes an interface.</em></h2></div><p>点击材质，改变数字服装。鼠标移动到舞台上，观察光线变化。</p></div><div class="lab-stage"><div class="look-stage" id="stage"><div class="model" id="model"><div class="head"></div><div class="body"></div><div class="skirt"></div></div><div class="model-label">LOOK <span id="lookNo">01</span> / 04</div></div><div class="lab-copy"><div class="eyebrow">Material / Mood / Meaning</div><h3 id="matTitle">流动的丝</h3><p id="matText">轻盈、反光、具有舞台感。像身体在灯光中留下的一道轨迹。</p><div class="materials"><button class="material active" data-mat="silk"><b>SILK</b><span>流动的丝</span></button><button class="material" data-mat="metal"><b>METAL</b><span>未来金属</span></button><button class="material" data-mat="paper"><b>PAPER</b><span>可持续纸艺</span></button><button class="material" data-mat="light"><b>LIGHT</b><span>可穿戴光</span></button></div><button class="random" id="randomLook">✦ 生成随机造型</button></div></div></section>
+
+
+<section id="game-zone" class="game-zone">
+  <div class="section-head">
+    <div class="section-no">04 / PLAYFUL INTERACTION</div>
+    <div>
+      <h2>Take a break.<br><em>Walk the runway.</em></h2>
+    </div>
+    <p>把简历变成一次小小的互动体验。按住蓄力，松开，让模特跳上下一块 T 台。</p>
+  </div>
+  <div class="game-card">
+    <div class="game-card-copy">
+      <div class="eyebrow">RUNWAY HOP · MINI GAME</div>
+      <h3>你的下一步，<br>由你决定。</h3>
+      <p>这是一个独立运行的小游戏。点击开始后，游戏会在作品集内部打开，不会跳转到其他页面。</p>
+      <button class="btn" id="openRunwayGame">开始走秀 ↗</button>
+    </div>
+    <div class="game-preview">
+      <div class="preview-stage">
+        <span class="preview-light l1"></span>
+        <span class="preview-light l2"></span>
+        <span class="preview-light l3"></span>
+        <div class="preview-platform"></div>
+        <div class="preview-model">✦</div>
+      </div>
+      <div class="preview-caption">PRESS · HOLD · RELEASE</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience"><div class="section-head"><div class="section-no">04 / EXPERIENCE & EDUCATION</div><div><h2>经历是作品的<br><em>另一种注脚。</em></h2></div></div><div class="timeline"><div class="timeline-item"><span class="date">2026 — 2027</span><div><h3>岭南大学 · 艺术、科技与商业理学</h3><p>关注艺术实践如何借助科技与商业思维，转化为新的体验与价值。</p></div></div><div class="timeline-item"><span class="date">2022 — 2026</span><div><h3>天津工业大学 · 服装表演</h3><p>建立服装、身体、舞台与视觉叙事之间的创作方法。</p></div></div><div class="timeline-item"><span class="date">NOW</span><div><h3>寻找新的合作可能</h3><p>期待加入一个重视创意、细节与真实表达的团队。</p></div></div></div></section>
+
+<section class="contact" id="contact"><div><div class="eyebrow">Let's make something meaningful</div><h2>有一个想法？<br><em>我们聊聊。</em></h2><a class="email" href="mailto:qimingjia@LN.hk">qimingjia@LN.hk ↗</a></div><div class="contact-foot"><span>JIA QIMING / 2026</span><span>QINGDAO · CHINA</span><a href="#top">BACK TO TOP ↑</a></div></section>
+</main>
+<footer style="padding:20px 4vw;display:flex;justify-content:space-between;font-size:11px"><span>© 2026 JIA QIMING</span><span>MADE WITH INTENTION</span></footer>
+
+
+<div class="game-modal" id="runwayGameModal" aria-hidden="true">
+  <div class="game-modal-box">
+    <button class="game-close" id="closeRunwayGame" aria-label="关闭小游戏">×</button>
+    <iframe title="RUNWAY HOP 模特走秀小游戏" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;RUNWAY HOP — 模特走秀跳跃游戏&lt;/title&gt;
+&lt;style&gt;
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101018;color:#fff;font-family:Arial,&quot;Microsoft YaHei&quot;,sans-serif}
+  body{display:flex;align-items:center;justify-content:center}
+  #wrap{position:relative;width:min(100vw,1100px);height:min(100vh,720px);overflow:hidden;background:linear-gradient(#24243a,#11111b 70%);border:2px solid #fff;border-radius:18px;box-shadow:0 20px 80px #0008}
+  canvas{display:block;width:100%;height:100%;touch-action:none;cursor:pointer}
+  .hud{position:absolute;top:18px;left:22px;right:22px;display:flex;justify-content:space-between;pointer-events:none;font-weight:800;letter-spacing:1px;text-shadow:0 2px 4px #000}
+  .pill{padding:9px 14px;border:1px solid #ffffff55;border-radius:999px;background:#151522aa;backdrop-filter:blur(8px)}
+  #hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);padding:10px 18px;border-radius:999px;background:#fff;color:#171722;font-weight:800;white-space:nowrap;pointer-events:none}
+  #overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0c0c14aa;backdrop-filter:blur(5px)}
+  .card{width:min(90%,470px);padding:34px;text-align:center;border:1px solid #fff5;border-radius:24px;background:#191927ee;box-shadow:0 20px 80px #0008}
+  h1{margin:0 0 12px;font-size:clamp(30px,6vw,60px);letter-spacing:4px}
+  p{line-height:1.7;color:#d8d8e7}
+  button{border:0;border-radius:999px;padding:14px 28px;background:#ff4fa3;color:white;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 8px 24px #ff4fa355}
+  button:hover{transform:translateY(-2px)}
+  .small{font-size:13px;color:#aaa}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;
+  &lt;canvas id=&quot;game&quot;&gt;&lt;/canvas&gt;
+  &lt;div class=&quot;hud&quot;&gt;
+    &lt;div class=&quot;pill&quot;&gt;RUNWAY HOP ✦ &lt;span id=&quot;stageText&quot;&gt;01&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;pill&quot;&gt;SCORE &lt;span id=&quot;scoreText&quot;&gt;0&lt;/span&gt;　BEST &lt;span id=&quot;bestText&quot;&gt;0&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;hint&quot;&gt;按住鼠标 / 手指 / 空格蓄力，松开让模特跳向下一块 T 台&lt;/div&gt;
+  &lt;div id=&quot;overlay&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h1&gt;RUNWAY&lt;br&gt;HOP&lt;/h1&gt;
+      &lt;p&gt;控制模特在霓虹 T 台之间跳跃。&lt;br&gt;按住蓄力，松开起跳；落在台面上才能继续走秀。&lt;/p&gt;
+      &lt;button id=&quot;startBtn&quot;&gt;开始走秀&lt;/button&gt;
+      &lt;p class=&quot;small&quot;&gt;电脑：鼠标按住或空格　·　手机：按住屏幕&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const canvas=document.getElementById(&#x27;game&#x27;),ctx=canvas.getContext(&#x27;2d&#x27;);
+const wrap=document.getElementById(&#x27;wrap&#x27;);
+const overlay=document.getElementById(&#x27;overlay&#x27;),startBtn=document.getElementById(&#x27;startBtn&#x27;);
+const scoreText=document.getElementById(&#x27;scoreText&#x27;),bestText=document.getElementById(&#x27;bestText&#x27;),stageText=document.getElementById(&#x27;stageText&#x27;);
+let W=1100,H=720,dpr=1;
+function resize(){dpr=Math.min(devicePixelRatio||1,2);W=wrap.clientWidth;H=wrap.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+addEventListener(&#x27;resize&#x27;,resize);resize();
+
+let state=&#x27;menu&#x27;,score=0,best=Number(localStorage.getItem(&#x27;runwayHopBest&#x27;)||0);
+let platforms=[],index=0,cameraX=0,chargeStart=0,charge=0,jump=null,last=0;
+const gravity=1750;
+
+function makePlatforms(){
+  platforms=[];
+  let x=90,y=535;
+  platforms.push({x,y,w:230,h:26,kind:0});
+  for(let i=1;i&lt;45;i++){
+    const gap=105+Math.random()*115;
+    x+=platforms[i-1].w+gap;
+    y=390+Math.random()*170;
+    platforms.push({x,y,w:145+Math.random()*95,h:26,kind:i%4});
+  }
+}
+function reset(){
+  score=0;index=0;cameraX=0;charge=0;jump=null;state=&#x27;ready&#x27;;makePlatforms();updateHud();
+  overlay.style.display=&#x27;none&#x27;;
+}
+function updateHud(){
+  scoreText.textContent=score;bestText.textContent=best;stageText.textContent=String(index+1).padStart(2,&#x27;0&#x27;);
+}
+function startCharge(){
+  if(state!==&#x27;ready&#x27;)return;
+  state=&#x27;charging&#x27;;chargeStart=performance.now();charge=0;
+}
+function release(){
+  if(state!==&#x27;charging&#x27;)return;
+  charge=Math.min(1,(performance.now()-chargeStart)/1100);
+  const from=platforms[index],to=platforms[index+1];
+  const startX=from.x+from.w*.5,startY=from.y-35;
+  const targetX=to.x+to.w*.5,targetY=to.y-35;
+  const dx=targetX-startX;
+  const reach=110+charge*390;
+  const success=dx&lt;=reach;
+  const duration=Math.max(.42,Math.min(.9,dx/(420+charge*220)));
+  jump={t:0,duration,startX,startY,targetX:success?targetX:startX+reach+70,targetY:success?targetY:startY+80,success,from,to,apex:Math.min(230,105+charge*105)};
+  state=&#x27;jumping&#x27;;
+}
+function endGame(){
+  state=&#x27;over&#x27;;
+  best=Math.max(best,score);localStorage.setItem(&#x27;runwayHopBest&#x27;,best);updateHud();
+  overlay.style.display=&#x27;flex&#x27;;
+  overlay.querySelector(&#x27;h1&#x27;).innerHTML=&#x27;SHOW&lt;br&gt;STOPPED&#x27;;
+  overlay.querySelector(&#x27;p&#x27;).innerHTML=&#x27;模特没有稳稳落在下一块 T 台上。&lt;br&gt;本次得分：&lt;b&gt;&#x27;+score+&#x27;&lt;/b&gt;&#x27;;
+  startBtn.textContent=&#x27;再走一场&#x27;;
+}
+function land(){
+  index++;score+=100;
+  if(charge&gt;.88)score+=50;
+  updateHud();
+  state=&#x27;ready&#x27;;jump=null;
+}
+function update(dt){
+  if(state===&#x27;charging&#x27;)charge=Math.min(1,(performance.now()-chargeStart)/1100);
+  if(state===&#x27;jumping&#x27;&amp;&amp;jump){
+    jump.t+=dt;
+    const p=Math.min(1,jump.t/jump.duration);
+    const ease=p*p*(3-2*p);
+    const x=jump.startX+(jump.targetX-jump.startX)*ease;
+    const baseY=jump.startY+(jump.targetY-jump.startY)*ease;
+    const arc=Math.sin(Math.PI*p)*jump.apex;
+    player.x=x;player.y=baseY-arc;
+    cameraX+=(Math.max(0,player.x-W*.42)-cameraX)*Math.min(1,dt*5);
+    if(p&gt;=1){
+      if(jump.success &amp;&amp; player.x&gt;=jump.to.x+12 &amp;&amp; player.x&lt;=jump.to.x+jump.to.w-12){
+        player.y=jump.to.y-35;land();
+      }else endGame();
+    }
+  }
+}
+const player={x:205,y:500};
+function drawBackground(){
+  const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,&#x27;#292944&#x27;);g.addColorStop(1,&#x27;#101018&#x27;);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  ctx.save();ctx.translate(-cameraX*.18,0);
+  for(let i=0;i&lt;24;i++){
+    const x=i*110;
+    ctx.fillStyle=i%2?&#x27;#ffffff09&#x27;:&#x27;#ff4fa30b&#x27;;ctx.beginPath();ctx.moveTo(x,H);ctx.lineTo(x+70,270);ctx.lineTo(x+140,H);ctx.fill();
+  }
+  ctx.restore();
+}
+function drawPlatform(p){
+  const x=p.x-cameraX,y=p.y;
+  if(x+p.w&lt;0||x&gt;W)return;
+  ctx.save();ctx.translate(x,y);
+  ctx.shadowBlur=18;ctx.shadowColor=&#x27;#ff4fa3&#x27;;
+  ctx.fillStyle=&#x27;#f3f1ff&#x27;;ctx.fillRect(0,0,p.w,p.h);
+  ctx.shadowBlur=0;ctx.fillStyle=&#x27;#ff4fa3&#x27;;ctx.fillRect(0,0,p.w,5);
+  ctx.fillStyle=&#x27;#2b203d&#x27;;ctx.fillRect(10,10,p.w-20,8);
+  ctx.fillStyle=&#x27;#fff8&#x27;;for(let i=15;i&lt;p.w-10;i+=28)ctx.fillRect(i,21,13,2);
+  // T台支架
+  ctx.strokeStyle=&#x27;#ffffff35&#x27;;ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(25,p.h);ctx.lineTo(45,100);ctx.moveTo(p.w-25,p.h);ctx.lineTo(p.w-45,100);ctx.stroke();
+  ctx.restore();
+}
+function drawModel(){
+  const x=player.x-cameraX,y=player.y;
+  ctx.save();ctx.translate(x,y);
+  if(state===&#x27;charging&#x27;){ctx.strokeStyle=&#x27;#ffda63&#x27;;ctx.lineWidth=5;ctx.beginPath();ctx.arc(0,8,35+charge*18,0,Math.PI*2);ctx.stroke()}
+  // shadow
+  ctx.fillStyle=&#x27;#0005&#x27;;ctx.beginPath();ctx.ellipse(0,39,24,7,0,0,Math.PI*2);ctx.fill();
+  // legs
+  ctx.strokeStyle=&#x27;#171725&#x27;;ctx.lineWidth=8;ctx.lineCap=&#x27;round&#x27;;
+  ctx.beginPath();ctx.moveTo(-5,19);ctx.lineTo(-13,38);ctx.moveTo(6,19);ctx.lineTo(14,38);ctx.stroke();
+  // body / jacket
+  ctx.fillStyle=&#x27;#ff4fa3&#x27;;ctx.beginPath();ctx.moveTo(-13,-17);ctx.lineTo(13,-17);ctx.lineTo(18,17);ctx.lineTo(-18,17);ctx.closePath();ctx.fill();
+  ctx.fillStyle=&#x27;#fff&#x27;;ctx.fillRect(-4,-13,8,25);
+  // head
+  ctx.fillStyle=&#x27;#f3b08e&#x27;;ctx.beginPath();ctx.arc(0,-29,11,0,Math.PI*2);ctx.fill();
+  // hair
+  ctx.fillStyle=&#x27;#171725&#x27;;ctx.beginPath();ctx.arc(0,-33,12,Math.PI,Math.PI*2);ctx.fill();ctx.fillRect(-12,-33,5,12);
+  // arms / runway pose
+  ctx.strokeStyle=&#x27;#f3b08e&#x27;;ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(-11,-10);ctx.lineTo(-26,7);ctx.moveTo(11,-10);ctx.lineTo(28,-2);ctx.stroke();
+  // heels
+  ctx.strokeStyle=&#x27;#ffda63&#x27;;ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-13,38);ctx.lineTo(-21,40);ctx.moveTo(14,38);ctx.lineTo(22,40);ctx.stroke();
+  ctx.restore();
+}
+function draw(){
+  drawBackground();
+  for(const p of platforms)drawPlatform(p);
+  // title-like runway lights
+  ctx.save();ctx.globalAlpha=.7;for(let i=0;i&lt;12;i++){let x=(i*120-cameraX*.6)% (W+120);if(x&lt;0)x+=W+120;ctx.fillStyle=&#x27;#ffda63&#x27;;ctx.beginPath();ctx.arc(x, H-35,3,0,Math.PI*2);ctx.fill()}ctx.restore();
+  drawModel();
+  if(state===&#x27;charging&#x27;){
+    const bw=220,bh=12,x=W/2-bw/2,y=H-70;
+    ctx.fillStyle=&#x27;#ffffff33&#x27;;ctx.fillRect(x,y,bw,bh);ctx.fillStyle=&#x27;#ff4fa3&#x27;;ctx.fillRect(x,y,bw*charge,bh);
+    ctx.strokeStyle=&#x27;#fff&#x27;;ctx.strokeRect(x,y,bw,bh);
+  }
+}
+function loop(t){
+  const dt=Math.min(.032,(t-last)/1000||0);last=t;update(dt);draw();requestAnimationFrame(loop)
+}
+function pointerDown(e){e.preventDefault();if(state===&#x27;ready&#x27;)startCharge()}
+function pointerUp(e){e.preventDefault();release()}
+canvas.addEventListener(&#x27;pointerdown&#x27;,pointerDown);
+canvas.addEventListener(&#x27;pointerup&#x27;,pointerUp);
+canvas.addEventListener(&#x27;pointercancel&#x27;,pointerUp);
+canvas.addEventListener(&#x27;pointerleave&#x27;,e=&gt;{if(e.buttons===1)release()});
+addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.code===&#x27;Space&#x27;){e.preventDefault();if(!e.repeat)startCharge()}});
+addEventListener(&#x27;keyup&#x27;,e=&gt;{if(e.code===&#x27;Space&#x27;){e.preventDefault();release()}});
+startBtn.onclick=reset;
+makePlatforms();bestText.textContent=best;requestAnimationFrame(loop);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+  </div>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div class="eyebrow">PROJECT NOTE</div><h3 id="modalTitle"></h3><p id="modalText"></p><button class="btn" onclick="closeModal()">返回作品集</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+window.addEventListener('scroll',()=>$('#header').classList.toggle('scrolled',scrollY>30));
+document.addEventListener('mousemove',e=>{const p=$('#heroArt').getBoundingClientRect();const x=(e.clientX-p.left)/p.width-.5,y=(e.clientY-p.top)/p.height-.5;$('.poster').style.transform=`rotate(${-7+x*12}deg) translate(${x*8}px,${y*8}px)`;$('#stage').style.setProperty('--glow',`hsl(${70+x*80} 100% 65%)`)});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});$$('section, .project').forEach(e=>{e.classList.add('reveal');obs.observe(e)});
+$$('.filter').forEach(b=>b.onclick=()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;$$('.project').forEach(p=>p.style.display=f==='all'||p.dataset.cat===f?'block':'none')});
+const mats={silk:{title:'流动的丝',text:'轻盈、反光、具有舞台感。像身体在灯光中留下的一道轨迹。',color:'#d8ff45',shape:'polygon(30% 0,70% 0,100% 100%,0 100%)'},metal:{title:'未来金属',text:'坚硬、冷峻、带有工业结构。服装像一件可移动的建筑。',color:'#b9c5d0',shape:'polygon(10% 0,90% 10%,100% 80%,65% 100%,0 65%)'},paper:{title:'可持续纸艺',text:'轻薄、褶皱、带有手工痕迹。材料本身成为叙事的一部分。',color:'#d9c5a1',shape:'polygon(20% 0,100% 30%,75% 100%,0 75%)'},light:{title:'可穿戴光',text:'发光、漂浮、具有未来感。身体成为一块移动的屏幕。',color:'#b8a5ff',shape:'polygon(50% 0,100% 50%,50% 100%,0 50%)'}};
+function setMat(k){const m=mats[k];$('#matTitle').textContent=m.title;$('#matText').textContent=m.text;$('#model').style.setProperty('--fabric',m.color);$('#model .skirt').style.clipPath=m.shape;$('#model').style.setProperty('--glow',m.color);$('#lookNo').textContent=Object.keys(mats).indexOf(k)+1;$$('.material').forEach(b=>b.classList.toggle('active',b.dataset.mat===k))}
+$$('.material').forEach(b=>b.onclick=()=>setMat(b.dataset.mat));$('#randomLook').onclick=()=>setMat(Object.keys(mats)[Math.floor(Math.random()*4)]);
+function openModal(t,p){$('#modalTitle').textContent=t;$('#modalText').textContent=p;$('#modal').classList.add('open')}function closeModal(){$('#modal').classList.remove('open')}
+
+const runwayModal=$('#runwayGameModal');
+$('#openRunwayGame').addEventListener('click',()=>{
+  runwayModal.classList.add('open');
+  runwayModal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+});
+function closeRunwayGame(){
+  runwayModal.classList.remove('open');
+  runwayModal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+$('#closeRunwayGame').addEventListener('click',closeRunwayGame);
+runwayModal.addEventListener('click',e=>{if(e.target===runwayModal)closeRunwayGame()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&runwayModal.classList.contains('open'))closeRunwayGame()});
+
+</script>
+</body></html>
